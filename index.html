@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1,
+      shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    <title>test bootstrap</title>
+
+  </head>
+  <body>
+    <header>
+      <div class="adv"><img src="./img/icons/icon1.png" alt=""><img
+          src="img/icons/icon2.png" alt="">Брендовий верхній одяг від 899 грн</div>
+      <div class="container">
+
+        <nav class="navbar navbar-expand-sm navbar-light bg-white">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              <img
+                src="./img/monvalise.png"
+                height="15"
+                alt="monvalise"
+                loading="lazy"
+                />
+            </a>
+            <div class="search flex-grow-1">
+              <div class="form-control d-flex align-items-center">
+                <i class="bi bi-search"></i><input type="text" id="search"
+                  class="border-0 form-control" placeholder="Знайти речі
+                  абобренди"/>
+              </div>
+            </div>
+            <button class="btn bg-dark text-light m-2 text-nowrap"
+              style="text-transform: none!important">Додати товар</button>
+            <div class="dropdown d-flex">
+              <a href="#" class="nav-link dropdown-toggle " href="#"
+                id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">Укр<i class="bi bi-chevron-down"></i></a>
+              <ul class="dropdown-menu dropdown-menu-end"
+                aria-labelledby="navbarDropdownMenuAvatar">
+                <li>
+                  <a class="dropdown-item bi-check" href="#">Українска</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Русский</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">English</a>
+                </li>
+              </ul>
+            </div>
+            <a class="text-reset me-2" href="#">
+              <i class="bi bi-heart "><span class="hbadge badge rounded-pill
+                  text-dark ">8</span></i>
+            </a>
+            <a class="text-reset me-3" href="#">
+              <i class="bi bi-chat-text"><span class="hbadge badge
+                  rounded-pill
+                  bg-danger">8</span></i>
+            </a>
+            <a class="text-reset me-3" href="#">
+              <i class="bi bi-cart"><span class="hbadge badge rounded-pill
+                  text-dark ">3</span></i>
+            </a>
+            <div class="dropdown">
+              <a
+                class="nav-link dropdown-toggle" href="#"
+                id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <img
+                  src="./img/icons/avatar.png"
+                  class="rounded-circle"
+                  height="32"
+                  alt="Black and White Portrait of a Man"
+                  loading="lazy"
+                  /><i class="bi bi-chevron-down"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end"
+                aria-labelledby="navbarDropdownMenuAvatar">
+                <li>
+                  <a class="dropdown-item" href="#">Мій профіль</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Налаштування</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Вихід</a>
+                </li>
+              </ul>
+
+            </div>
+          </nav>
+          <hr>
+        </div>
+      </header>
+      <div class="container">
+        <div class="list-group list-group-horizontal text-uppercase">
+          <a href="#" class="list-group-item list-group-item-action">Головна</a>
+          <a href="#" class="list-group-item list-group-item-action active">Каталог</a>
+          <a href="#" class="list-group-item list-group-item-action">Жінкам</a>
+          <a href="#" class="list-group-item list-group-item-action">Чоловікам</a>
+          <a href="#" class="list-group-item list-group-item-action">дИТЯЧі
+            речі</a>
+          <a href="#" class="list-group-item list-group-item-action">Аукціон</a>
+          <a href="#" class="list-group-item list-group-item-action">Брендиh</a>
+          <a href="#" class="list-group-item list-group-item-action">Акції</a>
+          <a href="#" class="list-group-item list-group-item-action">Аутентифікація</a>
+          <a href="#" class="list-group-item list-group-item-action">Блог</a>
+        </div>
+      </div>
+      <hr>
+      <div class="container">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Головна</a></li>
+            <li class="breadcrumb-item active">Каталог одягу</li>
+          </ol>
+        </nav>
+        <h2>Каталог одягу</h2>
+        <div class="row">
+          <div class="col">Фільтри</div>
+          <div class="col mb-3 d-flex justify-content-end align-items-center">
+            <label for="" class="form-label">Сортувати за:</label>
+            <select id="split-button" class="form-select-sm" name="" id="">
+              <option selected>За замовчуванням</option>
+              <option value="1">За ціною</option>
+              <option value="2">За містом</option>
+              <option value="3">За брендом</option>
+            </select>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <aside class="col-3 bd-sidebar">
+              <div class="accordion" id="according-filters">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button collapsed" type="button"
+                      data-bs-toggle="collapse" data-bs-target="#collapse1"
+                      aria-expanded="true" aria-controls="collapseOne">
+                      Категорії
+                    </button>
+                  </h2>
+                  <div id="collapse1" class="accordion-collapse collapse "
+                    aria-labelledby="headingOne"
+                    data-bs-parent="#according-filters">
+                    <div class="accordion-body">
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button"
+                      data-bs-toggle="collapse" data-bs-target="#collapse2"
+                      aria-expanded="true" aria-controls="collapseOne">
+                      Ціна
+                    </button>
+                  </h2>
+                  <div id="collapse2" class="accordion-collapse collapse show"
+                    aria-labelledby="headingOne"
+                    data-bs-parent="#according-filters">
+                    <div class="accordion-body">
+                      <input type="range" class="form-range" id="customRange1">
+                      <div class="row ">
+                        <div class="col-6">
+                          <div class="">Від</div>
+                          <input type="number" value="980">
+                          <div class="col-6">
+                            <div class="">До</div>
+                            <input type="number" value="20465">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button collapsed" type="button"
+                      data-bs-toggle="collapse" data-bs-target="#collapse3"
+                      aria-expanded="true" aria-controls="collapseOne">
+                      Продавець
+                    </button>
+                  </h2>
+                  <div id="collapse3" class="accordion-collapse collapse"
+                    aria-labelledby="headingOne"
+                    data-bs-parent="#according-filters">
+                    <div class="accordion-body">
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button collapsed" type="button"
+                      data-bs-toggle="collapse" data-bs-target="#collapse4"
+                      aria-expanded="true" aria-controls="collapseOne">
+                      Бренд
+                    </button>
+                  </h2>
+                  <div id="collapse4" class="accordion-collapse collapse"
+                    aria-labelledby="headingOne"
+                    data-bs-parent="#according-filters">
+                    <div class="accordion-body">
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button"
+                      data-bs-toggle="collapse" data-bs-target="#collapse5"
+                      aria-expanded="true" aria-controls="collapseOne">
+                      Стать
+                    </button>
+                  </h2>
+                  <div id="collapse5" class="accordion-collapse collapse show"
+                    aria-labelledby="headingOne"
+                    data-bs-parent="#according-filters">
+                    <div class="accordion-body">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox"
+                          id="female" checked>
+                        <label class="form-check-label d-flex justify-content-between" for="female">
+                          Жінкам <span>(64)</span>
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox"
+                          id="male" checked>
+                        <label class="form-check-label d-flex justify-content-between" for="male">
+                          Чоловікам<span>(16)</span>
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox"
+                          id="unisex">
+                        <label class="form-check-label d-flex justify-content-between" for="unisex">
+                          Унісекс<span>(24)</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button collapsed" type="button"
+                      data-bs-toggle="collapse" data-bs-target="#collapse6"
+                      aria-expanded="true" aria-controls="collapseOne">
+                      Розмір
+                    </button>
+                  </h2>
+                  <div id="collapse6" class="accordion-collapse collapse"
+                    aria-labelledby="headingOne"
+                    data-bs-parent="#according-filters">
+                    <div class="accordion-body">
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button collapsed" type="button"
+                      data-bs-toggle="collapse" data-bs-target="#collapse7"
+                      aria-expanded="true" aria-controls="collapseOne">
+                      Колір
+                    </button>
+                  </h2>
+                  <div id="collapse7" class="accordion-collapse collapse"
+                    aria-labelledby="headingOne"
+                    data-bs-parent="#according-filters">
+                    <div class="accordion-body">
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button collapsed" type="button"
+                      data-bs-toggle="collapse" data-bs-target="#collapse8"
+                      aria-expanded="true" aria-controls="collapseOne">
+                      Матеріал
+                    </button>
+                  </h2>
+                  <div id="collapse8" class="accordion-collapse collapse"
+                    aria-labelledby="headingOne"
+                    data-bs-parent="#according-filters">
+                    <div class="accordion-body">
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button collapsed" type="button"
+                      data-bs-toggle="collapse" data-bs-target="#collapse9"
+                      aria-expanded="true" aria-controls="collapseOne">
+                      Сезон
+                    </button>
+                  </h2>
+                  <div id="collapse9" class="accordion-collapse collapse"
+                    aria-labelledby="headingOne"
+                    data-bs-parent="#according-filters">
+                    <div class="accordion-body">
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button collapsed" type="button"
+                      data-bs-toggle="collapse" data-bs-target="#collapse10"
+                      aria-expanded="true" aria-controls="collapseOne">
+                      Стиль
+                    </button>
+                  </h2>
+                  <div id="collapse10" class="accordion-collapse collapse"
+                    aria-labelledby="headingOne"
+                    data-bs-parent="#according-filters">
+                    <div class="accordion-body">
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </aside>
+
+
+
+
+
+
+
+
+            <main class="col-9">
+              <div class="row">
+
+                <div class="col-4 ">
+                  <div class="card">
+                    <img class="card-img-top" src="./img/goods (1).png" alt="Title">
+                    <i class="bi bi-heart card-img-overlay "></i>
+                    img
+                    <div class="card-body">
+                      <h4 class="card-title">Title</h4>
+                      <p class="card-text">Text</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4 ">
+                  <div class="card">
+                    <img class="card-img-top" src="./img/goods (1).png" alt="Title">
+                    <i class="bi bi-heart card-img-overlay"></i>
+                    img
+                    <div class="card-body">
+                      <h4 class="card-title">Title</h4>
+                      <p class="card-text">Text</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4 ">
+                  <div class="card">
+                    <img class="card-img-top" src="./img/goods (1).png" alt="Title">
+                    <i class="bi bi-heart card-img-overlay "></i>
+                    img
+                    <div class="card-body">
+                      <h4 class="card-title">Title</h4>
+                      <p class="card-text">Text</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-4">1</div>
+                <div class="col-4">1</div>
+            </div>
+            </main>
+          </div>
+        </div>
+      </div>
+      <script type="text/javascript" src="./dist/js/bootstrap.bundle.min.js"></script>
+      <script type="text/javascript" src="./app.js"></script>
+      <!-- Custom scripts -->
+      <script type="text/javascript"></script>
+    </body>
+  </html>
