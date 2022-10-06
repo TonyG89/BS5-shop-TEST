@@ -19,3 +19,9 @@
 .caret-off::after {
     display: none;
 }
+
+footer{
+    margin: 50px;
+    padding: 30px;
+    background-color: var(--bs-secondary)
+}
