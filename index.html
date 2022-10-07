@@ -4,10 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1,
       shrink-to-fit=no" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <link rel="stylesheet" href="./dist/css/bootstrap.css">
-    <link rel="stylesheet" href="./font/bootstrap-icons.css">
-    <link rel="stylesheet" href="style.css">
+      <meta http-equiv="x-ua-compatible" content="ie=edge" />
+      <link rel="stylesheet" href="./css/bootstrap.css">
+      <link rel="stylesheet" href="./css/bootstrap-icons.css">
+      <link rel="stylesheet" href="./fonts/fonts.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>test bootstrap</title>
 
   </head>
@@ -21,22 +22,39 @@
       <!-- container-top -->
       </div>
       <div class="container">
-        <div class="row">
+        <div class="row justify-content-between">
           <aside class="col-3 bd-sidebar">
             <!-- aside -->
           </aside>
-          <main class="col-9">
-            <!-- main -->
-            
+          <main class="row col-9 justify-content-end">
+            <!-- main Cards-->
+            <nav aria-label="Page navigation example" id="pagination">
+              <ul class="pagination justify-content-center">
+                <li class="page-item">
+                  <a class="page-link prev" href="#" tabindex="-1" aria-disabled="true">Попередня</a>
+                </li>
+                <li class="page-item "><a class="page-link disabled" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item active"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                <li class="page-item"><a class="page-link" href="#">6</a></li>
+                <li class="page-item"><a class="page-link" href="#">7</a></li>
+                <li class="page-item"><a class="page-link" href="#">8</a></li>
+                <li class="page-item">
+                  <a class="page-link next" href="#">Наступна</a>
+                </li>
+              </ul></nav>
           </main>
+
         </div>
       </div>
     </section>
     <footer class="container-fluid">
 
     </footer>
-    <script type="text/javascript" src="./dist/js/bootstrap.bundle.min.js"></script>
-    <script type="text/javascript" src="./app.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="./js/app.js"></script>
     <!-- Custom scripts -->
     <script type="text/javascript"></script>
   </body>

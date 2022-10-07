@@ -1,0 +1,111 @@
+[
+    {
+        "brand": "LOUIS VUITTON",
+        "imgNum": 5,
+        "title": "Темно-сині джинси Louis Vuitton",
+        "organic": false,
+        "top": true,
+        "oldPrice": "5 499",
+        "newPrice": "3 799",
+        "geo": "Херсон",
+        "userAvatar": 7,
+        "userName": "LoveBrand"
+    },
+    {
+        "brand": "THOM BROWNE",
+        "imgNum": 6,
+        "title": "Чорний піджак Thom Browne",
+        "organic": false,
+        "top": true,
+        "oldPrice": "11 999",
+        "newPrice": "8 599",
+        "geo": "Хмельницький",
+        "userAvatar": 1,
+        "userName": "Sell_For_Men"
+    },
+    {
+        "brand": "CANALI",
+        "imgNum": 7,
+        "title": "Вовняний піджак Canali",
+        "organic": false,
+        "top": false,
+        "oldPrice": "4 999",
+        "newPrice": "2 599",
+        "geo": "Хмельницький",
+        "userAvatar": 1,
+        "userName": "Sell_For_Men"
+    },
+    {
+        "brand": "LOUIS VUITTON",
+        "imgNum": 8,
+        "title": "Клатч Louis Vuitton Limelight",
+        "organic": false,
+        "top": false,
+        "oldPrice": "4 999",
+        "newPrice": "3 499",
+        "geo": "Дніпро",
+        "userAvatar": 6,
+        "userName": "Brandear"
+    },
+    {
+        "brand": "ELENA GHISELINI",
+        "imgNum": 9,
+        "title": "Сумка з декором Elena Ghisellini",
+        "organic": true,
+        "top": false,
+        "oldPrice": "1 999",
+        "newPrice": "1 599",
+        "geo": "Дніпро",
+        "userAvatar": 6,
+        "userName": "Brandear"
+    },
+    {
+        "brand": "ACNE",
+        "imgNum": 1,
+        "title": "Бомбер Acne на блискавці",
+        "organic": false,
+        "top": false,
+        "oldPrice": "5 999",
+        "newPrice": "4 199",
+        "geo": "Київ",
+        "userAvatar": 3,
+        "userName": "Alexalex"
+    },
+    {
+        "brand": "GUCCI",
+        "imgNum": 2,
+        "title": "Довга сукня Gucci",
+        "organic": false,
+        "top": false,
+        "oldPrice": "11 999",
+        "newPrice": "8 599",
+        "geo": "Рівне",
+        "userAvatar": 4,
+        "userName": "SellBuy"
+    },
+    {
+        "brand": "CHANEL",
+        "imgNum": 3,
+        "title": "Помаранчевий бомбер Woolrich",
+        "organic": false,
+        "top": false,
+        "oldPrice": "1 999",
+        "newPrice": "1 599",
+        "geo": "Кропивницький",
+        "userAvatar": 5,
+        "userName": "Deeva_Sofia"
+    },
+    {
+        "brand": "HACHE",
+        "imgNum": 4,
+        "title": "Салатове пальто Hache",
+        "organic": false,
+        "top": false,
+        "oldPrice": "5 999",
+        "newPrice": "4 199",
+        "geo": "Київ",
+        "userAvatar": 7,
+        "userName": "LoveBrand"
+    }
+
+]

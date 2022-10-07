@@ -1,0 +1,87 @@
+:root {}
+
+.hbadge {
+    font-size: 8px;
+    position: relative;
+    bottom: 10px;
+    right: 7px;
+    background-color: #EFF1F1;
+    color: #0F1A34;
+}
+
+.adv {
+    background-color: #CBDCFF;
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    padding: 5px 0;
+}
+
+.caret-off::before {
+    content: '';
+}
+
+.caret-off::after {
+    display: none;
+}
+
+footer {
+    margin: 50px;
+    padding: 30px;
+    background-color: var(--bs-secondary)
+}
+
+
+.badge-top {
+    background-color: #B4FFF0;
+    color: #00382F;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 150%;
+
+}
+
+.badge-organic {
+    position: absolute;
+    top: 13px;
+    left: 16px;
+    background-color: #E0E3E3;
+    color: #2D3132;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.card{
+    min-height: 515px;
+}
+
+.card-brand {
+    color: #5C5F60;
+    font-size: 0.63rem !important;
+    font-weight: 500;
+}
+
+.card-title {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.card-price {
+    font-weight: 500;
+    font-size: 14px;
+    padding: 0;
+}
+
+.card-user {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.card-user img{
+    width: 20px; 
+    height: auto;
+    margin-right: 5px;
+}
