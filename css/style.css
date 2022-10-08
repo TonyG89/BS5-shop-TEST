@@ -30,7 +30,16 @@
 footer {
     margin: 50px;
     padding: 30px;
-    background-color: var(--bs-secondary)
+    background-color: var(--bs-secondary);
+    
+}
+
+footer a{
+    color: var(--bs-card-color);
+    font-weight: 400;
+font-size: 14px;
+text-decoration:none;
+padding-bottom: 10px;
 }
 
 
@@ -48,7 +57,7 @@ footer {
     top: 13px;
     left: 16px;
     background-color: #E0E3E3;
-    color: #2D3132;
+    color: var(--bs-card-color);
     font-size: 10px;
     font-weight: 400;
     line-height: 150%;

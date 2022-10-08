@@ -1,3 +1,5 @@
+import pagination from './js/pagination.js'
+
 function fetchComponent(url, attr = url) {
   fetch(`./html/${url}.html`)
     .then(res => res.text()
@@ -64,49 +66,5 @@ function getCards() {
     })
   })
 }
-
-// pagination
 const nPagination = document.querySelector('.pagination')
 nPagination.addEventListener("click", pagination)
-
-function pagination(e) {
-  const paginations = nPagination.querySelectorAll('li')
-  const prev = nPagination.querySelector('.prev')
-  const next = nPagination.querySelector('.next')
-
-  console.log(prev);
-  console.log(e.target.textContent);
-
-  if (e.target == prev) {
-
-      const last = nPagination.querySelector('.active .page-link')
-      console.log(last.textContent);
-      // last.textContent - 1
-      reset()
-      paginations.forEach(i => {
-        if (i.textContent == last.textContent - 1) {
-          i.classList.add("active")
-        }
-      })
-
-  } else if (e.target == next) {
-    alert('next')
-    reset()
-
-  } else {
-    reset()
-    e.target.closest(".page-item").classList.add("active")
-  }
-
-  function reset() {
-
-    paginations.forEach(i => {
-      i.classList.remove("active")
-    })
-  }
-
-  //   function prev(){
-
-  //   console.log()
-  // }
-}
