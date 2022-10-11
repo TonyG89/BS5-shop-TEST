@@ -25,8 +25,40 @@
       <div id="collapse2" class="accordion-collapse collapse show"
         aria-labelledby="headingOne"
         data-bs-parent="#according-filters">
+
+        <div id="slider-outer-div">
+          <div id="slider-max-label" class="slider-label"></div>
+          <div id="slider-min-label" class="slider-label"></div>
+          <div id="slider-div">
+            <div>50 DH</div>
+            <div>
+              <input id="ex2" type="range" data-slider-min="50"
+                 data-slider-max="2000" data-slider-value="[50,300]"
+                 data-slider-tooltip="hide" />
+            </div>
+            <div>2000 DH</div>
+          </div>
+        </div>
+
+        <div class="range_container">
+          <div class="sliders_control">
+             <input id="fromSlider" type="range" value="10" min="0" max="100"/>
+             <input id="toSlider" type="range" value="30" min="0" max="100"/>
+          </div>
+          <div class="form_control">
+            <div class="form_control_container">
+                <div class="form_control_container__time">Min</div>
+                <input class="form_control_container__time__input" type="number" id="fromInput" value="10" min="0" max="100"/>
+              </div>
+              <div class="form_control_container">
+                <div class="form_control_container__time">Max</div>
+                <input class="form_control_container__time__input" type="number" id="toInput" value="30" min="0" max="100"/>
+              </div>
+          </div>
+      </div>
+
         <div class="accordion-body">
-          <input type="range" class="form-range" id="customRange1">
+          <input type="range" class="form-range" id="customRange1" value=min + (max-min)/2>
           <div class="row ">
             <div class="col-6">
               <div class="">Від</div>
@@ -38,6 +70,8 @@
             </div>
           </div>
         </div>
+
+
       </div>
     </div>
     <div class="accordion-item">

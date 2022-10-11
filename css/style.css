@@ -1,14 +1,5 @@
 :root {}
 
-.hbadge {
-    font-size: 8px;
-    position: relative;
-    bottom: 10px;
-    right: 7px;
-    background-color: #EFF1F1;
-    color: #0F1A34;
-}
-
 .adv {
     background-color: #CBDCFF;
     text-align: center;
@@ -19,29 +10,46 @@
     padding: 5px 0;
 }
 
-.caret-off::before {
-    content: '';
+.hbadge {
+    font-size: 10px;
+    position: relative;
+    font-style: normal;
+    font-weight: 400;
+    bottom: 10px;
+    right: 7px;
+    background-color: var(--bs-secondary);
+    color: var(--bs-card-color);
+    border: 2px solid white;
 }
 
-.caret-off::after {
-    display: none;
-}
+
+
 
 footer {
     margin: 50px;
     padding: 30px;
     background-color: var(--bs-secondary);
-    
 }
 
-footer a{
+footer a {
     color: var(--bs-card-color);
     font-weight: 400;
-font-size: 14px;
-text-decoration:none;
-padding-bottom: 10px;
+    font-size: 14px;
+    text-decoration: none;
+    padding-top: 10px;
 }
 
+footer a:hover {
+    color: var(--bs-card-color);
+    border-bottom: 2px solid;
+}
+
+.copyright {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+}
 
 .badge-top {
     background-color: #B4FFF0;
@@ -63,7 +71,7 @@ padding-bottom: 10px;
     line-height: 150%;
 }
 
-.card{
+.card {
     min-height: 515px;
 }
 
@@ -89,8 +97,28 @@ padding-bottom: 10px;
     font-size: 14px;
 }
 
-.card-user img{
-    width: 20px; 
+.card-user img {
+    width: 20px;
     height: auto;
     margin-right: 5px;
 }
+
+
+
+
+#slider-div {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+  }
+  
+  #slider-div>div {
+    margin: 8px;
+  }
+  
+  .slider-label {
+    position: absolute;
+    background-color: #eee;
+    padding: 4px;
+    font-size: 0.75rem;
+  }

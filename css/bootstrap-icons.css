@@ -28,7 +28,7 @@ url("/../img/icons/bootstrap-icons.woff?8d200481aa7f02a2d63a331fc782cfaf") forma
 .bi-align-bottom::before { content: "\f103"; }
 .bi-align-center::before { content: "\f104"; }
 .bi-align-end::before { content: "\f105"; }
-.bi-align-middle::before { content: "\f106"; }
+.bi-align-middle::before { content: "\f106"; }h
 .bi-align-start::before { content: "\f107"; }
 .bi-align-top::before { content: "\f108"; }
 .bi-alt::before { content: "\f109"; }
