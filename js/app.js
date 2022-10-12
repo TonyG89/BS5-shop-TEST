@@ -7,6 +7,11 @@ function fetchComponent(url, attr = url) {
 
 document.addEventListener("DOMContentLoaded", ready);
 
+const render = new Promise((res, rej) => {
+  console.log(res);
+  console.log(rej);
+})
+
 function ready() {
   fetchComponent("header")
   fetchComponent("container-top", "#container-top")
@@ -34,7 +39,7 @@ function getCards() {
 
       nMain.insertBefore(divCard, nPagination).innerHTML += `
     <div class="col-4 py-3">
-    <div class="card p-1">
+    <div class="card p-4">
       <div class="top pb-3">
         ${innerOrganic}
         <i class="bi bi-heart d-flex justify-content-end"></i>
@@ -78,82 +83,151 @@ function pagination(e) {
   let nextCurrent = false
 
   if (e.target == prev && (+current.textContent - 1 == 1 || current.textContent == 1)) {
-      prevCurrent = true
+    prevCurrent = true
   }
 
   if (e.target == next && +current.textContent + 1 == paginations.length) {
-      nextCurrent = true
+    nextCurrent = true
   }
 
   if (e.target.textContent == 1 || prevCurrent) {
-      prev.classList.add("disabled")
-      next.classList.remove("disabled")
+    prev.classList.add("disabled")
+    next.classList.remove("disabled")
 
   } else if (e.target.textContent == paginations.length || nextCurrent) {
-      next.classList.add("disabled")
-      prev.classList.remove("disabled")
+    next.classList.add("disabled")
+    prev.classList.remove("disabled")
   } else {
-      next.classList.remove("disabled")
-      prev.classList.remove("disabled")
+    next.classList.remove("disabled")
+    prev.classList.remove("disabled")
   }
 
   if (e.target == prev) {
-      reset()
-      paginations.forEach(i => {
-          if (i.textContent == +current.textContent - 1) {
-              i.classList.add("active")
-          }
-      })
+    reset()
+    paginations.forEach(i => {
+      if (i.textContent == +current.textContent - 1) {
+        i.classList.add("active")
+      }
+    })
   } else if (e.target == nPagination.firstElementChild) {
-      reset()
-      current.parentNode.classList.add('active')
-      prev.classList.add("disabled")
+    reset()
+    current.parentNode.classList.add('active')
+    prev.classList.add("disabled")
   }
 
   else if (e.target == next) {
-      reset()
-      paginations.forEach(i => {
-          if (i.textContent == +current.textContent + 1) {
-              i.classList.add("active")
-          }
-      })
+    reset()
+    paginations.forEach(i => {
+      if (i.textContent == +current.textContent + 1) {
+        i.classList.add("active")
+      }
+    })
   } else if (e.target == nPagination.lastElementChild) {
-      reset()
-      current.parentNode.classList.add('active')
-      next.classList.add("disabled")
+    reset()
+    current.parentNode.classList.add('active')
+    next.classList.add("disabled")
   } else {
-      reset()
-      e.target.closest(".page-item").classList.add("active")
+    reset()
+    e.target.closest(".page-item").classList.add("active")
   }
   function reset() {
-      paginations.forEach(i => {
-          i.classList.remove("active")
-      })
+    paginations.forEach(i => {
+      i.classList.remove("active")
+    })
   }
 }
 
 
 // range slider
+setTimeout(() => {
+  const fromSlider = document.querySelector('#fromSlider');
+  const toSlider = document.querySelector('#toSlider');
+  const fromInput = document.querySelector('#fromInput');
+  const toInput = document.querySelector('#toInput');
 
-const setLabel = (lab, value) => {
-  const label = document.querySelector(`#slider-${lab}-label`);
-  label.text(value);
-  const slider = document.querySelector(`#slider-div .${lab}-slider-handle`);
-  const rect = slider[0].getBoundingClientRect();
-  label.offset({
-    top: rect.top - 30,
-    left: rect.left
-  });
-}
+  function controlFromInput(fromSlider, fromInput, toInput, controlSlider) {
+    const [from, to] = getParsed(fromInput, toInput);
+    fillSlider(fromInput, toInput, '#C6C6C6', '#25daa5', controlSlider);
+    if (from > to) {
+      fromSlider.value = to;
+      fromInput.value = to;
+    } else {
+      fromSlider.value = from;
+    }
+  }
 
-const setLabels = (values) => {
-  setLabel("min", values[0]);
-  setLabel("max", values[1]);
-}
+  function controlToInput(toSlider, fromInput, toInput, controlSlider) {
+    const [from, to] = getParsed(fromInput, toInput);
+    fillSlider(fromInput, toInput, '#C6C6C6', '#25daa5', controlSlider);
+    setToggleAccessible(toInput);
+    if (from <= to) {
+      toSlider.value = to;
+      toInput.value = to;
+    } else {
+      toInput.value = from;
+    }
+  }
+
+  function controlFromSlider(fromSlider, toSlider, fromInput) {
+    const [from, to] = getParsed(fromSlider, toSlider);
+    fillSlider(fromSlider, toSlider, '#C6C6C6', '#25daa5', toSlider);
+    if (from > to) {
+      fromSlider.value = to;
+      fromInput.value = to;
+    } else {
+      fromInput.value = from;
+    }
+  }
+
+  function controlToSlider(fromSlider, toSlider, toInput) {
+    const [from, to] = getParsed(fromSlider, toSlider);
+    fillSlider(fromSlider, toSlider, '#C6C6C6', '#25daa5', toSlider);
+    setToggleAccessible(toSlider);
+    if (from <= to) {
+      toSlider.value = to;
+      toInput.value = to;
+    } else {
+      toInput.value = from;
+      toSlider.value = from;
+    }
+  }
+
+  function getParsed(currentFrom, currentTo) {
+    const from = parseInt(currentFrom.value, 10);
+    const to = parseInt(currentTo.value, 10);
+    return [from, to];
+  }
+
+  function fillSlider(from, to, sliderColor, rangeColor, controlSlider) {
+    const rangeDistance = to.max - to.min;
+    const fromPosition = from.value - to.min;
+    const toPosition = to.value - to.min;
+    controlSlider.style.background = `linear-gradient(
+    to right,
+    ${sliderColor} 0%,
+    ${sliderColor} ${(fromPosition) / (rangeDistance) * 100}%,
+    ${rangeColor} ${((fromPosition) / (rangeDistance)) * 100}%,
+    ${rangeColor} ${(toPosition) / (rangeDistance) * 100}%, 
+    ${sliderColor} ${(toPosition) / (rangeDistance) * 100}%, 
+    ${sliderColor} 100%)`;
+  }
+
+  function setToggleAccessible(currentTarget) {
+    const toSlider = document.querySelector('#toSlider');
+    if (Number(currentTarget.value) <= 0) {
+      toSlider.style.zIndex = 2;
+    } else {
+      toSlider.style.zIndex = 0;
+    }
+  }
 
 
-document.querySelector('#ex2').slider().addEventListener('slide', function(e) {
-  setLabels(e.value);
-});
+  fillSlider(fromSlider, toSlider, '#C6C6C6', '#25daa5', toSlider);
+  setToggleAccessible(toSlider);
 
-setLabels($('#ex2').attr("data-value").split(","));
+  fromSlider.addEventListener("input", () => controlFromSlider(fromSlider, toSlider, fromInput))
+  toSlider.addEventListener("input", () => controlToSlider(fromSlider, toSlider, toInput))
+  fromInput.addEventListener("input", () => controlFromInput(fromSlider, fromInput, toInput, toSlider))
+  toInput.addEventListener("input", () => controlToInput(toSlider, fromInput, toInput, toSlider))
+
+}, 100)

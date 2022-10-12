@@ -1,219 +1,195 @@
 <div class="accordion" id="according-filters">
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingOne">
-        <button class="accordion-button collapsed" type="button"
-          data-bs-toggle="collapse" data-bs-target="#collapse1"
-          aria-expanded="true" aria-controls="collapseOne">
-          Категорії
-        </button>
-      </h2>
-      <div id="collapse1" class="accordion-collapse collapse "
-        aria-labelledby="headingOne"
-        data-bs-parent="#according-filters">
-        <div class="accordion-body">
-        </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button collapsed" type="button"
+        data-bs-toggle="collapse" data-bs-target="#collapse1"
+        aria-expanded="true" aria-controls="collapseOne">
+        Категорії
+      </button>
+    </h2>
+    <div id="collapse1" class="accordion-collapse collapse "
+      aria-labelledby="headingOne"
+      data-bs-parent="#according-filters">
+      <div class="accordion-body">
       </div>
     </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingOne">
-        <button class="accordion-button" type="button"
-          data-bs-toggle="collapse" data-bs-target="#collapse2"
-          aria-expanded="true" aria-controls="collapseOne">
-          Ціна
-        </button>
-      </h2>
-      <div id="collapse2" class="accordion-collapse collapse show"
-        aria-labelledby="headingOne"
-        data-bs-parent="#according-filters">
-
-        <div id="slider-outer-div">
-          <div id="slider-max-label" class="slider-label"></div>
-          <div id="slider-min-label" class="slider-label"></div>
-          <div id="slider-div">
-            <div>50 DH</div>
-            <div>
-              <input id="ex2" type="range" data-slider-min="50"
-                 data-slider-max="2000" data-slider-value="[50,300]"
-                 data-slider-tooltip="hide" />
-            </div>
-            <div>2000 DH</div>
-          </div>
-        </div>
-
-        <div class="range_container">
-          <div class="sliders_control">
-             <input id="fromSlider" type="range" value="10" min="0" max="100"/>
-             <input id="toSlider" type="range" value="30" min="0" max="100"/>
-          </div>
-          <div class="form_control">
-            <div class="form_control_container">
-                <div class="form_control_container__time">Min</div>
-                <input class="form_control_container__time__input" type="number" id="fromInput" value="10" min="0" max="100"/>
-              </div>
-              <div class="form_control_container">
-                <div class="form_control_container__time">Max</div>
-                <input class="form_control_container__time__input" type="number" id="toInput" value="30" min="0" max="100"/>
-              </div>
-          </div>
-      </div>
-
-        <div class="accordion-body">
-          <input type="range" class="form-range" id="customRange1" value=min + (max-min)/2>
-          <div class="row ">
-            <div class="col-6">
-              <div class="">Від</div>
-              <input type="number" value="980">
-              <div class="col-6">
-                <div class="">До</div>
-                <input type="number" value="20465">
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-      </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingOne">
-        <button class="accordion-button collapsed" type="button"
-          data-bs-toggle="collapse" data-bs-target="#collapse3"
-          aria-expanded="true" aria-controls="collapseOne">
-          Продавець
-        </button>
-      </h2>
-      <div id="collapse3" class="accordion-collapse collapse"
-        aria-labelledby="headingOne"
-        data-bs-parent="#according-filters">
-        <div class="accordion-body">
-        </div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingOne">
-        <button class="accordion-button collapsed" type="button"
-          data-bs-toggle="collapse" data-bs-target="#collapse4"
-          aria-expanded="true" aria-controls="collapseOne">
-          Бренд
-        </button>
-      </h2>
-      <div id="collapse4" class="accordion-collapse collapse"
-        aria-labelledby="headingOne"
-        data-bs-parent="#according-filters">
-        <div class="accordion-body">
-        </div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingOne">
-        <button class="accordion-button" type="button"
-          data-bs-toggle="collapse" data-bs-target="#collapse5"
-          aria-expanded="true" aria-controls="collapseOne">
-          Стать
-        </button>
-      </h2>
-      <div id="collapse5" class="accordion-collapse collapse show"
-        aria-labelledby="headingOne"
-        data-bs-parent="#according-filters">
-        <div class="accordion-body">
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox"
-              id="female" checked>
-            <label class="form-check-label d-flex justify-content-between" for="female">
-              Жінкам <span>(64)</span>
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox"
-              id="male" checked>
-            <label class="form-check-label d-flex justify-content-between" for="male">
-              Чоловікам<span>(16)</span>
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox"
-              id="unisex">
-            <label class="form-check-label d-flex justify-content-between" for="unisex">
-              Унісекс<span>(24)</span>
-            </label>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingOne">
-        <button class="accordion-button collapsed" type="button"
-          data-bs-toggle="collapse" data-bs-target="#collapse6"
-          aria-expanded="true" aria-controls="collapseOne">
-          Розмір
-        </button>
-      </h2>
-      <div id="collapse6" class="accordion-collapse collapse"
-        aria-labelledby="headingOne"
-        data-bs-parent="#according-filters">
-        <div class="accordion-body">
-        </div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingOne">
-        <button class="accordion-button collapsed" type="button"
-          data-bs-toggle="collapse" data-bs-target="#collapse7"
-          aria-expanded="true" aria-controls="collapseOne">
-          Колір
-        </button>
-      </h2>
-      <div id="collapse7" class="accordion-collapse collapse"
-        aria-labelledby="headingOne"
-        data-bs-parent="#according-filters">
-        <div class="accordion-body">
-        </div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingOne">
-        <button class="accordion-button collapsed" type="button"
-          data-bs-toggle="collapse" data-bs-target="#collapse8"
-          aria-expanded="true" aria-controls="collapseOne">
-          Матеріал
-        </button>
-      </h2>
-      <div id="collapse8" class="accordion-collapse collapse"
-        aria-labelledby="headingOne"
-        data-bs-parent="#according-filters">
-        <div class="accordion-body">
-        </div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingOne">
-        <button class="accordion-button collapsed" type="button"
-          data-bs-toggle="collapse" data-bs-target="#collapse9"
-          aria-expanded="true" aria-controls="collapseOne">
-          Сезон
-        </button>
-      </h2>
-      <div id="collapse9" class="accordion-collapse collapse"
-        aria-labelledby="headingOne"
-        data-bs-parent="#according-filters">
-        <div class="accordion-body">
-        </div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingOne">
-        <button class="accordion-button collapsed" type="button"
-          data-bs-toggle="collapse" data-bs-target="#collapse10"
-          aria-expanded="true" aria-controls="collapseOne">
-          Стиль
-        </button>
-      </h2>
-      <div id="collapse10" class="accordion-collapse collapse"
-        aria-labelledby="headingOne"
-        data-bs-parent="#according-filters">
-        <div class="accordion-body">
-        </div>
-      </div>
-    </div>
-
   </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button" type="button"
+        data-bs-toggle="collapse" data-bs-target="#collapse2"
+        aria-expanded="true" aria-controls="collapseOne">
+        Ціна
+      </button>
+    </h2>
+    <div id="collapse2" class="accordion-collapse collapse show"
+      aria-labelledby="headingOne"
+      data-bs-parent="#according-filters">
+
+      <div class="accordion-body">
+        <div class="sliders_control">
+          <input id="fromSlider" type="range" value="980" min="980" max="50000"/>
+          <input id="toSlider" type="range" value="20465" min="980" max="50000"/>
+        </div>
+        <div class="row fs-6">
+          <div class="col-6">
+            <div class="form_control_container__time text-secondary">Від</div>
+            <input class="form_control_container__time__input fs-5 text-dark w-100" type="number"
+              id="fromInput" value="980" />
+          </div>
+          <div class="col-6">
+            <div class="form_control_container__time text-secondary">До</div>
+            <input class="form_control_container__time__input fs-5 text-dark w-100" type="number"
+              id="toInput" value="20465"/>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button collapsed" type="button"
+        data-bs-toggle="collapse" data-bs-target="#collapse3"
+        aria-expanded="true" aria-controls="collapseOne">
+        Продавець
+      </button>
+    </h2>
+    <div id="collapse3" class="accordion-collapse collapse"
+      aria-labelledby="headingOne"
+      data-bs-parent="#according-filters">
+      <div class="accordion-body">
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button collapsed" type="button"
+        data-bs-toggle="collapse" data-bs-target="#collapse4"
+        aria-expanded="true" aria-controls="collapseOne">
+        Бренд
+      </button>
+    </h2>
+    <div id="collapse4" class="accordion-collapse collapse"
+      aria-labelledby="headingOne"
+      data-bs-parent="#according-filters">
+      <div class="accordion-body">
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button" type="button"
+        data-bs-toggle="collapse" data-bs-target="#collapse5"
+        aria-expanded="true" aria-controls="collapseOne">
+        Стать
+      </button>
+    </h2>
+    <div id="collapse5" class="accordion-collapse collapse show"
+      aria-labelledby="headingOne"
+      data-bs-parent="#according-filters">
+      <div class="accordion-body ">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox"
+            id="female" checked>
+          <label class="form-check-label ms-3 d-flex justify-content-between"
+            for="female">
+            Жінкам <span>(64)</span>
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox"
+            id="male" checked>
+          <label class="form-check-label ms-3 d-flex justify-content-between"
+            for="male">
+            Чоловікам<span>(16)</span>
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox"
+            id="unisex">
+          <label class="form-check-label ms-3 d-flex justify-content-between"
+            for="unisex">
+            Унісекс<span>(24)</span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button collapsed" type="button"
+        data-bs-toggle="collapse" data-bs-target="#collapse6"
+        aria-expanded="true" aria-controls="collapseOne">
+        Розмір
+      </button>
+    </h2>
+    <div id="collapse6" class="accordion-collapse collapse"
+      aria-labelledby="headingOne"
+      data-bs-parent="#according-filters">
+      <div class="accordion-body">
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button collapsed" type="button"
+        data-bs-toggle="collapse" data-bs-target="#collapse7"
+        aria-expanded="true" aria-controls="collapseOne">
+        Колір
+      </button>
+    </h2>
+    <div id="collapse7" class="accordion-collapse collapse"
+      aria-labelledby="headingOne"
+      data-bs-parent="#according-filters">
+      <div class="accordion-body">
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button collapsed" type="button"
+        data-bs-toggle="collapse" data-bs-target="#collapse8"
+        aria-expanded="true" aria-controls="collapseOne">
+        Матеріал
+      </button>
+    </h2>
+    <div id="collapse8" class="accordion-collapse collapse"
+      aria-labelledby="headingOne"
+      data-bs-parent="#according-filters">
+      <div class="accordion-body">
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button collapsed" type="button"
+        data-bs-toggle="collapse" data-bs-target="#collapse9"
+        aria-expanded="true" aria-controls="collapseOne">
+        Сезон
+      </button>
+    </h2>
+    <div id="collapse9" class="accordion-collapse collapse"
+      aria-labelledby="headingOne"
+      data-bs-parent="#according-filters">
+      <div class="accordion-body">
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button collapsed" type="button"
+        data-bs-toggle="collapse" data-bs-target="#collapse10"
+        aria-expanded="true" aria-controls="collapseOne">
+        Стиль
+      </button>
+    </h2>
+    <div id="collapse10" class="accordion-collapse collapse"
+      aria-labelledby="headingOne"
+      data-bs-parent="#according-filters">
+      <div class="accordion-body">
+      </div>
+    </div>
+  </div>
+
+</div>
