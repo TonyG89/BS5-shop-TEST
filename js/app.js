@@ -7,17 +7,13 @@ function fetchComponent(url, attr = url) {
 
 document.addEventListener("DOMContentLoaded", ready);
 
-const render = new Promise((res, rej) => {
-  console.log(res);
-  console.log(rej);
-})
-
 function ready() {
   fetchComponent("header")
   fetchComponent("container-top", "#container-top")
   fetchComponent("aside")
   fetchComponent("footer")
   getCards()
+  rangeSlider()
 }
 
 function getCards() {
@@ -139,15 +135,22 @@ function pagination(e) {
 
 
 // range slider
-setTimeout(() => {
+
+const rangeSlider = () => {
   const fromSlider = document.querySelector('#fromSlider');
   const toSlider = document.querySelector('#toSlider');
   const fromInput = document.querySelector('#fromInput');
   const toInput = document.querySelector('#toInput');
 
+  if (toInput == null) {
+    let time = 0
+    time += 100
+    setTimeout(rangeSlider, time)
+  }
+
   function controlFromInput(fromSlider, fromInput, toInput, controlSlider) {
     const [from, to] = getParsed(fromInput, toInput);
-    fillSlider(fromInput, toInput, '#C6C6C6', '#25daa5', controlSlider);
+    fillSlider(fromInput, toInput, '#C4C7C7', '#8E9192', controlSlider);
     if (from > to) {
       fromSlider.value = to;
       fromInput.value = to;
@@ -158,7 +161,7 @@ setTimeout(() => {
 
   function controlToInput(toSlider, fromInput, toInput, controlSlider) {
     const [from, to] = getParsed(fromInput, toInput);
-    fillSlider(fromInput, toInput, '#C6C6C6', '#25daa5', controlSlider);
+    fillSlider(fromInput, toInput, '#C4C7C7', '#8E9192', controlSlider);
     setToggleAccessible(toInput);
     if (from <= to) {
       toSlider.value = to;
@@ -170,7 +173,7 @@ setTimeout(() => {
 
   function controlFromSlider(fromSlider, toSlider, fromInput) {
     const [from, to] = getParsed(fromSlider, toSlider);
-    fillSlider(fromSlider, toSlider, '#C6C6C6', '#25daa5', toSlider);
+    fillSlider(fromSlider, toSlider, '#C4C7C7', '#8E9192', toSlider);
     if (from > to) {
       fromSlider.value = to;
       fromInput.value = to;
@@ -181,7 +184,7 @@ setTimeout(() => {
 
   function controlToSlider(fromSlider, toSlider, toInput) {
     const [from, to] = getParsed(fromSlider, toSlider);
-    fillSlider(fromSlider, toSlider, '#C6C6C6', '#25daa5', toSlider);
+    fillSlider(fromSlider, toSlider, '#C4C7C7', '#8E9192', toSlider);
     setToggleAccessible(toSlider);
     if (from <= to) {
       toSlider.value = to;
@@ -203,13 +206,13 @@ setTimeout(() => {
     const fromPosition = from.value - to.min;
     const toPosition = to.value - to.min;
     controlSlider.style.background = `linear-gradient(
-    to right,
-    ${sliderColor} 0%,
-    ${sliderColor} ${(fromPosition) / (rangeDistance) * 100}%,
-    ${rangeColor} ${((fromPosition) / (rangeDistance)) * 100}%,
-    ${rangeColor} ${(toPosition) / (rangeDistance) * 100}%, 
-    ${sliderColor} ${(toPosition) / (rangeDistance) * 100}%, 
-    ${sliderColor} 100%)`;
+      to right,
+      ${sliderColor} 0%,
+      ${sliderColor} ${(fromPosition) / (rangeDistance) * 100}%,
+      ${rangeColor} ${((fromPosition) / (rangeDistance)) * 100}%,
+      ${rangeColor} ${(toPosition) / (rangeDistance) * 100}%, 
+      ${sliderColor} ${(toPosition) / (rangeDistance) * 100}%, 
+      ${sliderColor} 100%)`;
   }
 
   function setToggleAccessible(currentTarget) {
@@ -222,12 +225,12 @@ setTimeout(() => {
   }
 
 
-  fillSlider(fromSlider, toSlider, '#C6C6C6', '#25daa5', toSlider);
+  fillSlider(fromSlider, toSlider, '#C4C7C7', '#8E9192', toSlider);
   setToggleAccessible(toSlider);
 
   fromSlider.addEventListener("input", () => controlFromSlider(fromSlider, toSlider, fromInput))
   toSlider.addEventListener("input", () => controlToSlider(fromSlider, toSlider, toInput))
   fromInput.addEventListener("input", () => controlFromInput(fromSlider, fromInput, toInput, toSlider))
   toInput.addEventListener("input", () => controlToInput(toSlider, fromInput, toInput, toSlider))
+}
 
-}, 100)
